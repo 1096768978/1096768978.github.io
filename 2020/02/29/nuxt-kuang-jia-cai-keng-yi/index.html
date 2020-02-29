@@ -4,17 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="感谢信, Ayasa">
+    <meta name="keywords" content="nuxt框架踩坑(一), Ayasa">
     <meta name="description" content="
-这是一个采用 Material Design 和响应式设计的 Hexo 博客主题。
+nuxt框架踩坑之关于引入的插件报错显示”document is not defined”
 
 
-本站使用的主题是由闪烁之狐制作提供
-
-
-仅以此鞭策自己向大牛学习
-
-">
+前段时间，使用瀑布流组件写公司项目时在引入和使用都正确的情况下出现了报错”document is not defined”，令我百思不得其解，">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>感谢信 | Ayasa</title>
+    <title>nuxt框架踩坑(一) | Ayasa</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -317,7 +312,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">感谢信</h1>
+                    <h1 class="description center-align post-title">nuxt框架踩坑(一)</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +429,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                                <span class="chip bg-color">随笔</span>
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
                             </a>
                         
                     </div>
@@ -450,7 +445,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-22
+                    2020-02-29
                 </div>
                 
 
@@ -459,7 +454,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    49
+                    281
                 </div>
                 
 
@@ -478,13 +473,13 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <blockquote>
-<p>这是一个采用 <code>Material Design</code> 和响应式设计的 Hexo 博客主题。</p>
+<p>nuxt框架踩坑之关于引入的插件报错显示”document is not defined”</p>
 </blockquote>
+<hr>
+<h4 id="前段时间，使用瀑布流组件写公司项目时在引入和使用都正确的情况下出现了报错”document-is-not-defined”，令我百思不得其解，后来在公司前辈的指点下略懂了其中的奥秘。"><a href="#前段时间，使用瀑布流组件写公司项目时在引入和使用都正确的情况下出现了报错”document-is-not-defined”，令我百思不得其解，后来在公司前辈的指点下略懂了其中的奥秘。" class="headerlink" title="前段时间，使用瀑布流组件写公司项目时在引入和使用都正确的情况下出现了报错”document is not defined”，令我百思不得其解，后来在公司前辈的指点下略懂了其中的奥秘。"></a>前段时间，使用瀑布流组件写公司项目时在引入和使用都正确的情况下出现了报错”document is not defined”，令我百思不得其解，后来在公司前辈的指点下略懂了其中的奥秘。</h4><hr>
+<h4 id="要弄懂这个问题，首先要明白-Nuxt-是-Vue-上的-SSR，也就是服务端渲染应用框架，可在很大程度上解决当前-SPA-和-CSR-的首页加载慢，不利于-SEO-的问题。而重点恰恰在于这个服务器端渲染。由于大多数的插件使用的原生JS编写，肯定有大量的document对象，这时一到服务器端渲染自然会出现问题。"><a href="#要弄懂这个问题，首先要明白-Nuxt-是-Vue-上的-SSR，也就是服务端渲染应用框架，可在很大程度上解决当前-SPA-和-CSR-的首页加载慢，不利于-SEO-的问题。而重点恰恰在于这个服务器端渲染。由于大多数的插件使用的原生JS编写，肯定有大量的document对象，这时一到服务器端渲染自然会出现问题。" class="headerlink" title="要弄懂这个问题，首先要明白 Nuxt 是 Vue 上的 SSR，也就是服务端渲染应用框架，可在很大程度上解决当前 SPA 和 CSR 的首页加载慢，不利于 SEO 的问题。而重点恰恰在于这个服务器端渲染。由于大多数的插件使用的原生JS编写，肯定有大量的document对象，这时一到服务器端渲染自然会出现问题。"></a>要弄懂这个问题，首先要明白 Nuxt 是 Vue 上的 SSR，也就是服务端渲染应用框架，可在很大程度上解决当前 SPA 和 CSR 的首页加载慢，不利于 SEO 的问题。而重点恰恰在于这个服务器端渲染。由于大多数的插件使用的原生JS编写，肯定有大量的document对象，这时一到服务器端渲染自然会出现问题。</h4><hr>
 <blockquote>
-<p>本站使用的主题是由<a href="https://github.com/blinkfox" target="_blank" rel="noopener">闪烁之狐</a>制作提供</p>
-</blockquote>
-<blockquote>
-<p>仅以此鞭策自己向大牛学习</p>
+<p>解决方法(以下以vue-waterfall-easy的一个props属性imgsArr作为参考) 只要在该框架渲染前写入v-if=”imgsArr.length &gt; 1”,即可。原因是当该数组长度大于一时，服务器已经将该框架渲染完成，此时就不会再出现”document is not defined”的情况了。</p>
 </blockquote>
 
             </div>
@@ -511,7 +506,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/02/22/gan-xie-xin/">http://yoursite.com/2020/02/22/gan-xie-xin/</a>
+                    <a href="http://yoursite.com/2020/02/29/nuxt-kuang-jia-cai-keng-yi/">http://yoursite.com/2020/02/29/nuxt-kuang-jia-cai-keng-yi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -549,8 +544,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                                    <span class="chip bg-color">随笔</span>
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
                                 </a>
                             
                         </div>
@@ -716,87 +711,33 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/02/23/song-dong-yang-ma-sheng-xu/">
+                <a href="/2020/02/29/nuxt-kuang-jia-cai-keng-yi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="送东阳马生序">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="nuxt框架踩坑(一)">
                         
-                        <span class="card-title">送东阳马生序</span>
+                        <span class="card-title">nuxt框架踩坑(一)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
-送东阳马生序（摘抄）
+nuxt框架踩坑之关于引入的插件报错显示”document is not defined”
 
 
-明朝宋濂的送东阳马生序是我非常喜欢的一篇古文，故手录之。
-  &nbsp;&nbsp;余幼时即嗜学。家贫，无从致书以观，每假借于藏书之家，手自笔录，计日以还。天大寒，砚冰坚，手指不可屈伸，弗之怠。录毕，走送之，不
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-23
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            罗祉鑫
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                        <span class="chip bg-color">随笔</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/02/22/gan-xie-xin/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="感谢信">
-                        
-                        <span class="card-title">感谢信</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-这是一个采用 Material Design 和响应式设计的 Hexo 博客主题。
-
-
-本站使用的主题是由闪烁之狐制作提供
-
-
-仅以此鞭策自己向大牛学习
-
-
+前段时间，使用瀑布流组件写公司项目时在引入和使用都正确的情况下出现了报错”document is not defined”，令我百思不得其解，
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-29
                             </span>
                         <span class="publish-author">
                             
@@ -810,8 +751,59 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                        <span class="chip bg-color">随笔</span>
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/02/25/vue-pu-bu-liu-shi-xian-fang-fa/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="vue-瀑布流实现方法">
+                        
+                        <span class="card-title">vue-瀑布流实现方法</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+vue-瀑布流实现方法基于vue-waterfall-easy
+
+
+瀑布流用css或者原生js也可以实现。以下是基于插件vue-waterfall-easy的方法，工作中遇到的问题在这里记下。
+1.1 npm安装
+npm install 
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            罗祉鑫
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
                     </a>
                     
                 </div>
