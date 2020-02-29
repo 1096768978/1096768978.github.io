@@ -4,14 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="vue-瀑布流实现方法, Ayasa">
-    <meta name="description" content="
-vue-瀑布流实现方法基于vue-waterfall-easy
+    <meta name="keywords" content="nuxt框架踩坑(二)之timeago.js, Ayasa">
+    <meta name="description" content="timeago.js顾名思义是一款能显示XX分钟之前的插件。官方文档上用法也和其他插件一样npm安装后import引入即可。然而在跟随着官方文档安装之后却一直报错。解决方法如下。安装
 
-
-瀑布流用css或者原生js也可以实现。以下是基于插件vue-waterfall-easy的方法，工作中遇到的问题在这里记下。
-1.1 npm安装
-npm install ">
+npm install timeago.js官方导入为">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +15,7 @@ npm install ">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>vue-瀑布流实现方法 | Ayasa</title>
+    <title>nuxt框架踩坑(二)之timeago.js | Ayasa</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +305,12 @@ npm install ">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">vue-瀑布流实现方法</h1>
+                    <h1 class="description center-align post-title">nuxt框架踩坑(二)之timeago.js</h1>
                 </div>
             </div>
         </div>
@@ -447,7 +443,7 @@ npm install ">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-25
+                    2020-02-29
                 </div>
                 
 
@@ -456,7 +452,7 @@ npm install ">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    188
+                    99
                 </div>
                 
 
@@ -474,28 +470,9 @@ npm install ">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>vue-瀑布流实现方法基于vue-waterfall-easy</p>
-</blockquote>
-<hr>
-<h4 id="瀑布流用css或者原生js也可以实现。以下是基于插件vue-waterfall-easy的方法，工作中遇到的问题在这里记下。"><a href="#瀑布流用css或者原生js也可以实现。以下是基于插件vue-waterfall-easy的方法，工作中遇到的问题在这里记下。" class="headerlink" title="瀑布流用css或者原生js也可以实现。以下是基于插件vue-waterfall-easy的方法，工作中遇到的问题在这里记下。"></a>瀑布流用css或者原生js也可以实现。以下是基于插件vue-waterfall-easy的方法，工作中遇到的问题在这里记下。</h4><hr>
-<h3 id="1-1-npm安装"><a href="#1-1-npm安装" class="headerlink" title="1.1 npm安装"></a>1.1 npm安装</h3><blockquote>
-<p>npm install vue-waterfall-easy –save-dev</p>
-</blockquote>
-<h3 id="1-2-es6语法引用"><a href="#1-2-es6语法引用" class="headerlink" title="1.2 es6语法引用"></a>1.2 es6语法引用</h3><blockquote>
-<p>import vueWaterfallEasy from ‘vue-waterfall-easy’</p>
-</blockquote>
+                <h2 id="timeago-js顾名思义是一款能显示XX分钟之前的插件。官方文档上用法也和其他插件一样npm安装后import引入即可。然而在跟随着官方文档安装之后却一直报错。解决方法如下。"><a href="#timeago-js顾名思义是一款能显示XX分钟之前的插件。官方文档上用法也和其他插件一样npm安装后import引入即可。然而在跟随着官方文档安装之后却一直报错。解决方法如下。" class="headerlink" title="timeago.js顾名思义是一款能显示XX分钟之前的插件。官方文档上用法也和其他插件一样npm安装后import引入即可。然而在跟随着官方文档安装之后却一直报错。解决方法如下。"></a>timeago.js顾名思义是一款能显示XX分钟之前的插件。官方文档上用法也和其他插件一样npm安装后import引入即可。然而在跟随着官方文档安装之后却一直报错。解决方法如下。</h2><p>安装</p>
 <blockquote>
-<p>export default {<br>  name: ‘app’,<br>  components: {<br>    vueWaterfallEasy<br>  }<br>}</p>
-</blockquote>
-<h3 id="2-基本示例"><a href="#2-基本示例" class="headerlink" title="2. 基本示例"></a>2. 基本示例</h3><blockquote>
-<p>&lt;vue-waterfall-easy :imgsArr=”imgsArr” @scrollReachBottom=”getData”&gt;</vue-waterfall-easy></p>
-</blockquote>
-<h3 id="js部分"><a href="#js部分" class="headerlink" title="js部分"></a>js部分</h3><blockquote>
-<p>import vueWaterfallEasy from ‘./vue-waterfall-easy/vue-waterfall-easy.vue’<br>import axios from ‘axios’</p>
-</blockquote>
-<blockquote>
-<p>export default {<br>  name: ‘app’,<br>  data() {<br>    return {<br>      imgsArr: [],<br>      group: 0, // request param<br>    }<br>  },<br>  components: {<br>    vueWaterfallEasy<br>  },<br>  methods: {<br>    getData() {<br>      axios.get(‘./static/mock/data.json?group=’ + this.group) // 真实环境中，后端会根据参数group返回新的图片数组，这里我用一个静态json文件模拟<br>        .then(res =&gt; {<br>          this.imgsArr = this.imgsArr.concat(res.data)<br>          this.group++<br>        })<br>    },<br>  },<br>  created() {<br>    this.getData()<br>  }<br>}</p>
+<p>npm install timeago.js<br>官方导入为<br>import timeago from ‘timeago.js’<br>在nuxt框架下正确的导入姿势为<br>import {format} from ‘timeago.js’</p>
 </blockquote>
 
             </div>
@@ -522,7 +499,7 @@ npm install ">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/02/25/vue-pu-bu-liu-shi-xian-fang-fa/">http://yoursite.com/2020/02/25/vue-pu-bu-liu-shi-xian-fang-fa/</a>
+                    <a href="http://yoursite.com/2020/02/29/nuxt-kuang-jia-cai-keng-er-zhi-timeago-js/">http://yoursite.com/2020/02/29/nuxt-kuang-jia-cai-keng-er-zhi-timeago-js/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -727,9 +704,58 @@ npm install ">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/02/29/nuxt-kuang-jia-cai-keng-er-zhi-timeago-js/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="nuxt框架踩坑(二)之timeago.js">
+                        
+                        <span class="card-title">nuxt框架踩坑(二)之timeago.js</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            timeago.js顾名思义是一款能显示XX分钟之前的插件。官方文档上用法也和其他插件一样npm安装后import引入即可。然而在跟随着官方文档安装之后却一直报错。解决方法如下。安装
+
+npm install timeago.js官方导入为
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-29
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            罗祉鑫
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/02/29/nuxt-kuang-jia-cai-keng-yi/">
                     <div class="card-image">
@@ -751,9 +777,9 @@ nuxt框架踩坑之关于引入的插件报错显示”document is not defined�
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -767,56 +793,6 @@ nuxt框架踩坑之关于引入的插件报错显示”document is not defined�
                     
                     <a href="/tags/%E5%89%8D%E7%AB%AF/">
                         <span class="chip bg-color">前端</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/02/23/song-dong-yang-ma-sheng-xu/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="送东阳马生序">
-                        
-                        <span class="card-title">送东阳马生序</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-送东阳马生序（摘抄）
-
-
-明朝宋濂的送东阳马生序是我非常喜欢的一篇古文，故手录之。
-  &nbsp;&nbsp;余幼时即嗜学。家贫，无从致书以观，每假借于藏书之家，手自笔录，计日以还。天大寒，砚冰坚，手指不可屈伸，弗之怠。录毕，走送之，不
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-23
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            罗祉鑫
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                        <span class="chip bg-color">随笔</span>
                     </a>
                     
                 </div>
