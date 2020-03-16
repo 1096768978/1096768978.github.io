@@ -4,10 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="nuxt框架踩坑(二)之timeago.js, Ayasa">
-    <meta name="description" content="timeago.js顾名思义是一款能显示XX分钟之前的插件。官方文档上用法也和其他插件一样npm安装后import引入即可。然而在跟随着官方文档安装之后却一直报错。解决方法如下。安装
-
-npm install timeago.js官方导入为">
+    <meta name="keywords" content="vue中ref与$nextTick, Ayasa">
+    <meta name="description" content="  众所周知，vue中是不提倡直接操作DOM元素的，但有些时候确实需要用到直接操作DOM，比如input框自动获取焦点等。在移动端用autofocus会造成只有第一次有效的情况。所有这个时候需要用到focus()方法。而在vue中想要直接操">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +13,7 @@ npm install timeago.js官方导入为">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>nuxt框架踩坑(二)之timeago.js | Ayasa</title>
+    <title>vue中ref与$nextTick | Ayasa</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +303,12 @@ npm install timeago.js官方导入为">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">nuxt框架踩坑(二)之timeago.js</h1>
+                    <h1 class="description center-align post-title">vue中ref与$nextTick</h1>
                 </div>
             </div>
         </div>
@@ -443,7 +441,7 @@ npm install timeago.js官方导入为">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-29
+                    2020-03-16
                 </div>
                 
 
@@ -452,7 +450,7 @@ npm install timeago.js官方导入为">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    99
+                    266
                 </div>
                 
 
@@ -470,9 +468,14 @@ npm install timeago.js官方导入为">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="timeago-js顾名思义是一款能显示XX分钟之前的插件。官方文档上用法也和其他插件一样npm安装后import引入即可。然而在跟随着官方文档安装之后却一直报错。解决方法如下。"><a href="#timeago-js顾名思义是一款能显示XX分钟之前的插件。官方文档上用法也和其他插件一样npm安装后import引入即可。然而在跟随着官方文档安装之后却一直报错。解决方法如下。" class="headerlink" title="timeago.js顾名思义是一款能显示XX分钟之前的插件。官方文档上用法也和其他插件一样npm安装后import引入即可。然而在跟随着官方文档安装之后却一直报错。解决方法如下。"></a>timeago.js顾名思义是一款能显示XX分钟之前的插件。官方文档上用法也和其他插件一样npm安装后import引入即可。然而在跟随着官方文档安装之后却一直报错。解决方法如下。</h2><p>安装</p>
+                <p>  众所周知，vue中是不提倡直接操作DOM元素的，但有些时候确实需要用到直接操作DOM，比如input框自动获取焦点等。在移动端用autofocus会造成只有第一次有效的情况。所有这个时候需要用到focus()方法。而在vue中想要直接操作DOM元素，就必须用ref属性进行注册。ref 被用来给DOM元素或子组件注册引用信息。引用信息会根据父组件的 $refs 对象进行注册。如果在普通的DOM元素上使用，引用信息就是元素; 如果用在子组件上，引用信息就是组件实例。</p>
 <blockquote>
-<p>npm install timeago.js<br>官方导入为<br>import timeago from ‘timeago.js’<br>在nuxt框架下正确的导入姿势为<br>import {format} from ‘timeago.js’</p>
+<input type="text" id="inputText" ref="name-input">
+</blockquote>
+<hr>
+<p>  而$nextTick则是用于异步执行DOM更新。简单来说就是立刻获得改变之后的DOM元素值。在数据变化后要执行的某个操作，而这个操作需要使用随数据改变而改变的DOM结构的时候，这个操作应该放进Vue.nextTick()的回调函数中。</p>
+<blockquote>
+<p>this.$nextTick(()=&gt; { this.$refs[‘name-input’].focus()})</p>
 </blockquote>
 
             </div>
@@ -499,7 +502,7 @@ npm install timeago.js官方导入为">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/02/29/nuxt-kuang-jia-cai-keng-er-zhi-timeago-js/">http://yoursite.com/2020/02/29/nuxt-kuang-jia-cai-keng-er-zhi-timeago-js/</a>
+                    <a href="http://yoursite.com/2020/03/16/vue-zhong-ref-yu-nexttick/">http://yoursite.com/2020/03/16/vue-zhong-ref-yu-nexttick/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -704,29 +707,30 @@ npm install timeago.js官方导入为">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/03/03/ye-mian-shua-xin-dao-zhi-shu-ju-diu-shi-de-wen-ti/">
+                <a href="/2020/03/16/vue-zhong-ref-yu-nexttick/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="页面刷新导致数据丢失的问题">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="vue中ref与$nextTick">
                         
-                        <span class="card-title">页面刷新导致数据丢失的问题</span>
+                        <span class="card-title">vue中ref与$nextTick</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在做vue项目的过程中有时候会遇到一个问题，就是进行F5页面刷新的时候，页面的数据会丢失，出现这个问题的原因是因为当用vuex做全局状态管理的时候，store中的数据是保存在运行内存中的，页面刷新时会重新加载vue实例，store中的数据就
+                              众所周知，vue中是不提倡直接操作DOM元素的，但有些时候确实需要用到直接操作DOM，比如input框自动获取焦点等。在移动端用autofocus会造成只有第一次有效的情况。所有这个时候需要用到focus()方法。而在vue中想要直接操
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -735,6 +739,7 @@ npm install timeago.js官方导入为">
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -753,28 +758,26 @@ npm install timeago.js官方导入为">
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/29/nuxt-kuang-jia-cai-keng-yi/">
+                <a href="/2020/03/04/scoped-cai-keng-ji-shen-yong-yuan-yin/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="nuxt框架踩坑(一)">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="scoped踩坑及慎用原因">
                         
-                        <span class="card-title">nuxt框架踩坑(一)</span>
+                        <span class="card-title">scoped踩坑及慎用原因</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-nuxt框架踩坑之关于引入的插件报错显示”document is not defined”
+                            最近做项目时，因为同一样式在不同页面无法生效而百思不得其解。正好看到了以下文章，分享给各位。一.scoped的作用和原理
 
-
-前段时间，使用瀑布流组件写公司项目时在引入和使用都正确的情况下出现了报错”document is not defined”，令我百思不得其解，
+实现组件的私有化，不对全局造成样式污染，表示当前style属性只属于当前模块虽然方便但是我们需要慎用，因为当我们使用
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-04
                             </span>
                         <span class="publish-author">
                             
