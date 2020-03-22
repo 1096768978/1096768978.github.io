@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="页面刷新导致数据丢失的问题, Ayasa">
-    <meta name="description" content="在做vue项目的过程中有时候会遇到一个问题，就是进行F5页面刷新的时候，页面的数据会丢失，出现这个问题的原因是因为当用vuex做全局状态管理的时候，store中的数据是保存在运行内存中的，页面刷新时会重新加载vue实例，store中的数据就">
+    <meta name="keywords" content="高度100%和100vh的区别, Ayasa">
+    <meta name="description" content="
+关于height:100%和height:100vh的区别vh就是当前屏幕可见高度的1%，也就是说height:100vh == height:100%;但是当元素没有内容时候，设置height:100%，该元素不会被撑开，此时高度为0，">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>页面刷新导致数据丢失的问题 | Ayasa</title>
+    <title>高度100%和100vh的区别 | Ayasa</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,12 +304,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">页面刷新导致数据丢失的问题</h1>
+                    <h1 class="description center-align post-title">高度100%和100vh的区别</h1>
                 </div>
             </div>
         </div>
@@ -441,7 +442,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-03
+                    2020-03-22
                 </div>
                 
 
@@ -450,14 +451,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    568
+                    156
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -468,24 +469,20 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="在做vue项目的过程中有时候会遇到一个问题，就是进行F5页面刷新的时候，页面的数据会丢失，出现这个问题的原因是因为当用vuex做全局状态管理的时候，store中的数据是保存在运行内存中的，页面刷新时会重新加载vue实例，store中的数据就会被重新赋值，因此数据就丢失了，解决方式如下："><a href="#在做vue项目的过程中有时候会遇到一个问题，就是进行F5页面刷新的时候，页面的数据会丢失，出现这个问题的原因是因为当用vuex做全局状态管理的时候，store中的数据是保存在运行内存中的，页面刷新时会重新加载vue实例，store中的数据就会被重新赋值，因此数据就丢失了，解决方式如下：" class="headerlink" title="在做vue项目的过程中有时候会遇到一个问题，就是进行F5页面刷新的时候，页面的数据会丢失，出现这个问题的原因是因为当用vuex做全局状态管理的时候，store中的数据是保存在运行内存中的，页面刷新时会重新加载vue实例，store中的数据就会被重新赋值，因此数据就丢失了，解决方式如下："></a>在做vue项目的过程中有时候会遇到一个问题，就是进行F5页面刷新的时候，页面的数据会丢失，出现这个问题的原因是因为当用vuex做全局状态管理的时候，store中的数据是保存在运行内存中的，页面刷新时会重新加载vue实例，store中的数据就会被重新赋值，因此数据就丢失了，解决方式如下：</h2><p>解决方法一：</p>
-<p>最先想到的应该就是利用localStorage/sessionStorage将数据储存在外部，做一个持久化储存，下面是利用localStorage存储的具体方案：</p>
-<p> 方案一：由于state中的数据是响应式的，而数据又是通过mutation来进行修改，故在通过mutation修改state中数据的同时调用localStorage.setItem()方法来进行数据的存储。</p>
-<blockquote>
-<p>import Vue from ‘vue’;<br>import Vuex from ‘vuex’;</p>
+                <blockquote>
+<p>关于height:100%和height:100vh的区别vh就是当前屏幕可见高度的1%，也就是说height:100vh == height:100%;但是当元素没有内容时候，设置height:100%，该元素不会被撑开，此时高度为0，但是设置height:100vh，该元素会被撑开屏幕高度一致。</p>
 </blockquote>
-<blockquote>
-<p>Vue.use(Vuex);</p>
-</blockquote>
-<blockquote>
-<p>export default new Vuex.Store（{<br>   state: {<br>      orderList: [],<br>      menuList: []<br>  },<br>   mutations: {<br>       orderList(s, d) {<br>         s.orderList= d;<br>         window.localStorage.setItem&gt; (“list”,JSON.stringify(s.orderList))<br>       },<br>       menuList(s, d) {<br>         s.menuList = d;<br>         window.localStorage.setItem&gt; (“list”,JSON.stringify(s.menuList))<br>      },<br>  }<br>}）<br>在页面加载的时候再通过localStorage.getItem()将数据取出放回到vuex，可在app.vue的created()周期函数中写如下代码：<br>       if (window.localStorage.getItem(“list”) ) {<br>        this.$store.replaceState(Object.assign({}, this.$store.state,JSON.parse(window.localStorage.getItem(“list”))))<br>    } </p>
-</blockquote>
-<p>window.addEventListener(“beforeunload”,()=&gt;{<br>        window.localStorage.setItem(“list”,JSON.stringify(this.$store.state))<br>    })</p>
 <hr>
-<p>解决方法二：</p>
-<p>这个方法是基于对computed计算属性的理解，在vue的官方文档中有这么一段话：<br>我们可以将同一函数定义为一个方法而不是一个计算属性。两种方式的最终结果确实是完全相同的。然而，不同的是计算属性是基于它们的响应式依赖进行缓存的。只在相关响应式依赖发生改变时它们才会重新求值。这就意味着只要 message 还没有发生改变，多次访问 reversedMessage 计算属性会立即返回之前的计算结果，而不必再次执行函数。<br>由此得知计算属性的结果会被缓存，也就是说在有缓存的情况下，computed会优先使用缓存，于是也可以在state数据相对应的页面这样写：</p>
 <blockquote>
-<pre><code>computed:{</code></pre><p>   orderList() {<br>       return this.$store.state.orderList<br>   }<br>}   </p>
+<p>ios设备对于非用户点击出发的focus会禁止。所以正确的写法为@click=”xxx().focus()”</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>判断dom全部加载完成的window全局事件为window.onload可放入mount函数中</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>引入不同的组件可能会导致底层的库冲突从而引发一些无法解决的bug</p>
 </blockquote>
 
             </div>
@@ -512,7 +509,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/03/03/ye-mian-shua-xin-dao-zhi-shu-ju-diu-shi-de-wen-ti/">http://yoursite.com/2020/03/03/ye-mian-shua-xin-dao-zhi-shu-ju-diu-shi-de-wen-ti/</a>
+                    <a href="http://yoursite.com/2020/03/22/gao-du-100-he-100vh-de-qu-bie/">http://yoursite.com/2020/03/22/gao-du-100-he-100vh-de-qu-bie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -717,31 +714,31 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/03/04/scoped-cai-keng-ji-shen-yong-yuan-yin/">
+                <a href="/2020/03/22/gao-du-100-he-100vh-de-qu-bie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="scoped踩坑及慎用原因">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="高度100%和100vh的区别">
                         
-                        <span class="card-title">scoped踩坑及慎用原因</span>
+                        <span class="card-title">高度100%和100vh的区别</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            最近做项目时，因为同一样式在不同页面无法生效而百思不得其解。正好看到了以下文章，分享给各位。一.scoped的作用和原理
-
-实现组件的私有化，不对全局造成样式污染，表示当前style属性只属于当前模块虽然方便但是我们需要慎用，因为当我们使用
+                            
+关于height:100%和height:100vh的区别vh就是当前屏幕可见高度的1%，也就是说height:100vh == height:100%;但是当元素没有内容时候，设置height:100%，该元素不会被撑开，此时高度为0，
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -750,6 +747,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -768,26 +766,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/29/nuxt-kuang-jia-cai-keng-er-zhi-timeago-js/">
+                <a href="/2020/03/16/vue-zhong-ref-yu-nexttick/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="nuxt框架踩坑(二)之timeago.js">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="vue中ref与$nextTick">
                         
-                        <span class="card-title">nuxt框架踩坑(二)之timeago.js</span>
+                        <span class="card-title">vue中ref与$nextTick</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            timeago.js顾名思义是一款能显示XX分钟之前的插件。官方文档上用法也和其他插件一样npm安装后import引入即可。然而在跟随着官方文档安装之后却一直报错。解决方法如下。安装
-
-npm install timeago.js官方导入为
+                              众所周知，vue中是不提倡直接操作DOM元素的，但有些时候确实需要用到直接操作DOM，比如input框自动获取焦点等。在移动端用autofocus会造成只有第一次有效的情况。所有这个时候需要用到focus()方法。而在vue中想要直接操
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-16
                             </span>
                         <span class="publish-author">
                             
