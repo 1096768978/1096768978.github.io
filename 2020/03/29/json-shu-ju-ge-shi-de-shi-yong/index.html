@@ -4,17 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="感谢信, Ayasa">
-    <meta name="description" content="
-这是一个采用 Material Design 和响应式设计的 Hexo 博客主题。
-
-
-本站使用的主题是由闪烁之狐制作提供
-
-
-仅以此鞭策自己向大牛学习
-
-">
+    <meta name="keywords" content="json数据格式的使用, Ayasa">
+    <meta name="description" content="  JSON 和 JS Object 看起来很像，其实两个没有任何关系。JSON 语法的作者是道格拉斯（Douglas Crockford），JS 语法的作者是布兰登・艾奇（Brendan Eich）。道格拉斯发明 JSON 的时候参考了 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>感谢信 | Ayasa</title>
+    <title>json数据格式的使用 | Ayasa</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +303,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">感谢信</h1>
+                    <h1 class="description center-align post-title">json数据格式的使用</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +425,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                                <span class="chip bg-color">随笔</span>
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
                             </a>
                         
                     </div>
@@ -450,7 +441,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-22
+                    2020-03-29
                 </div>
                 
 
@@ -459,7 +450,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    49
+                    332
                 </div>
                 
 
@@ -477,15 +468,14 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>这是一个采用 <code>Material Design</code> 和响应式设计的 Hexo 博客主题。</p>
+                <p>  JSON 和 JS Object 看起来很像，其实两个没有任何关系。JSON 语法的作者是道格拉斯（Douglas Crockford），JS 语法的作者是布兰登・艾奇（Brendan Eich）。道格拉斯发明 JSON 的时候参考了 JS 的对象语法，仅此而已。并且JSON 的字符串必须用双引号。 JSON 无法表示 undefined，只能表示 “undefined”。<br>  一些常用的json函数</p>
+<blockquote>
+<p>JSON.stringify(value[, replacer [, space]]) 将JS数据结构转化为JSON字符串 —— JSON.stringify</p>
 </blockquote>
 <blockquote>
-<p>本站使用的主题是由<a href="https://github.com/blinkfox" target="_blank" rel="noopener">闪烁之狐</a>制作提供</p>
+<p>JSON.parse(text[, reviver]) 将JSON字符串解析为JS数据结构</p>
 </blockquote>
-<blockquote>
-<p>仅以此鞭策自己向大牛学习</p>
-</blockquote>
+<p>  通常情况下，前端构造一个JS对象，用于包装要传递的数据，然后将JS对象转化为JSON字符串，再发送请求到后端。”JSON”全名”JavaScript Object Notation”，所以它的格式（语法）是基于JS的，但它就是一种格式，而JS对象是一个实例，是存在于内存的一个东西。<br>  此外，JSON是可以传输的，因为它是文本格式，但是JS对象是没办法传输的，在语法上，JSON也会更加严格，但是JS对象就很松了。那么两个不同的东西为什么那么密切，因为JSON毕竟是从JS中演变出来的，语法相近。JSON必须加双引号，JS对象可允许不加、加单引号、加双引号。</p>
 
             </div>
             <hr/>
@@ -511,7 +501,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/02/22/gan-xie-xin/">http://yoursite.com/2020/02/22/gan-xie-xin/</a>
+                    <a href="http://yoursite.com/2020/03/29/json-shu-ju-ge-shi-de-shi-yong/">http://yoursite.com/2020/03/29/json-shu-ju-ge-shi-de-shi-yong/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -549,8 +539,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                                    <span class="chip bg-color">随笔</span>
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
                                 </a>
                             
                         </div>
@@ -716,87 +706,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/02/23/song-dong-yang-ma-sheng-xu/">
+                <a href="/2020/03/29/json-shu-ju-ge-shi-de-shi-yong/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="送东阳马生序">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="json数据格式的使用">
                         
-                        <span class="card-title">送东阳马生序</span>
+                        <span class="card-title">json数据格式的使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-送东阳马生序（摘抄）
-
-
-明朝宋濂的送东阳马生序是我非常喜欢的一篇古文，故手录之。
-  &nbsp;&nbsp;余幼时即嗜学。家贫，无从致书以观，每假借于藏书之家，手自笔录，计日以还。天大寒，砚冰坚，手指不可屈伸，弗之怠。录毕，走送之，不
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-23
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            罗祉鑫
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                        <span class="chip bg-color">随笔</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/02/22/gan-xie-xin/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="感谢信">
-                        
-                        <span class="card-title">感谢信</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-这是一个采用 Material Design 和响应式设计的 Hexo 博客主题。
-
-
-本站使用的主题是由闪烁之狐制作提供
-
-
-仅以此鞭策自己向大牛学习
-
-
+                              JSON 和 JS Object 看起来很像，其实两个没有任何关系。JSON 语法的作者是道格拉斯（Douglas Crockford），JS 语法的作者是布兰登・艾奇（Brendan Eich）。道格拉斯发明 JSON 的时候参考了 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-29
                             </span>
                         <span class="publish-author">
                             
@@ -810,8 +742,54 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                        <span class="chip bg-color">随笔</span>
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/03/22/gao-du-100-he-100vh-de-qu-bie/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="高度100%和100vh的区别">
+                        
+                        <span class="card-title">高度100%和100vh的区别</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+关于height:100%和height:100vh的区别vh就是当前屏幕可见高度的1%，也就是说height:100vh == height:100%;但是当元素没有内容时候，设置height:100%，该元素不会被撑开，此时高度为0，
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            罗祉鑫
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
                     </a>
                     
                 </div>
