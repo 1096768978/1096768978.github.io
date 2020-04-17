@@ -4,9 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="高度100%和100vh的区别, Ayasa">
-    <meta name="description" content="
-关于height:100%和height:100vh的区别vh就是当前屏幕可见高度的1%，也就是说height:100vh == height:100%;但是当元素没有内容时候，设置height:100%，该元素不会被撑开，此时高度为0，">
+    <meta name="keywords" content="focusUpdata()以及微信小程序的一些问题, Ayasa">
+    <meta name="description" content="vue 强制更新强制更新 this.$forceUpdate()。迫使 Vue 实例重新渲染。注意它仅仅影响实例本身和插入插槽内容的子组件，而不是所有子组件。
+
+js保留两位小数方法
+
+Math.floor(15.7784514000 * ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>高度100%和100vh的区别 | Ayasa</title>
+    <title>focusUpdata()以及微信小程序的一些问题 | Ayasa</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,7 +312,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">高度100%和100vh的区别</h1>
+                    <h1 class="description center-align post-title">focusUpdata()以及微信小程序的一些问题</h1>
                 </div>
             </div>
         </div>
@@ -442,7 +445,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-22
+                    2020-04-17
                 </div>
                 
 
@@ -451,7 +454,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    156
+                    125
                 </div>
                 
 
@@ -469,20 +472,21 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>关于height:100%和height:100vh的区别vh就是当前屏幕可见高度的1%，也就是说height:100vh == height:100%;但是当元素没有内容时候，设置height:100%，该元素不会被撑开，此时高度为0，但是设置height:100vh，该元素会被撑开屏幕高度一致。</p>
+                <p>vue 强制更新强制更新 this.$forceUpdate()。迫使 Vue 实例重新渲染。注意它仅仅影响实例本身和插入插槽内容的子组件，而不是所有子组件。</p>
+<hr>
+<p>js保留两位小数方法</p>
+<blockquote>
+<p>Math.floor(15.7784514000 * 100) / 100</p>
 </blockquote>
 <hr>
+<p>原生wx:if的变量改变了值，但是页面没有重新渲染</p>
 <blockquote>
-<p>ios设备对于非用户点击出发的focus会禁止。所以正确的写法为@click=”xxx().focus()”</p>
+<p>解决方法：需要调用setData方法来改变变量的值。</p>
 </blockquote>
 <hr>
+<p>微信小程序设置hover-class不起作用(class冲突)</p>
 <blockquote>
-<p>判断dom全部加载完成的window全局事件为window.onload可放入mount函数中</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>引入不同的组件可能会导致底层的库冲突从而引发一些无法解决的bug</p>
+<p><button style="background:red;" hover-class="green">123</button><br>.green {<br> background: green !important;<br>}</p>
 </blockquote>
 
             </div>
@@ -509,7 +513,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/03/22/gao-du-100-he-100vh-de-qu-bie/">http://yoursite.com/2020/03/22/gao-du-100-he-100vh-de-qu-bie/</a>
+                    <a href="http://yoursite.com/2020/04/17/focusupdata-yi-ji-wei-xin-xiao-cheng-xu-de-yi-xie-wen-ti/">http://yoursite.com/2020/04/17/focusupdata-yi-ji-wei-xin-xiao-cheng-xu-de-yi-xie-wen-ti/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -714,29 +718,34 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/03/29/json-shu-ju-ge-shi-de-shi-yong/">
+                <a href="/2020/04/17/focusupdata-yi-ji-wei-xin-xiao-cheng-xu-de-yi-xie-wen-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="json数据格式的使用">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="focusUpdata()以及微信小程序的一些问题">
                         
-                        <span class="card-title">json数据格式的使用</span>
+                        <span class="card-title">focusUpdata()以及微信小程序的一些问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                              JSON 和 JS Object 看起来很像，其实两个没有任何关系。JSON 语法的作者是道格拉斯（Douglas Crockford），JS 语法的作者是布兰登・艾奇（Brendan Eich）。道格拉斯发明 JSON 的时候参考了 
+                            vue 强制更新强制更新 this.$forceUpdate()。迫使 Vue 实例重新渲染。注意它仅仅影响实例本身和插入插槽内容的子组件，而不是所有子组件。
+
+js保留两位小数方法
+
+Math.floor(15.7784514000 * 
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -745,6 +754,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -763,24 +773,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/16/vue-zhong-ref-yu-nexttick/">
+                <a href="/2020/03/29/json-shu-ju-ge-shi-de-shi-yong/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="vue中ref与$nextTick">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="json数据格式的使用">
                         
-                        <span class="card-title">vue中ref与$nextTick</span>
+                        <span class="card-title">json数据格式的使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                              众所周知，vue中是不提倡直接操作DOM元素的，但有些时候确实需要用到直接操作DOM，比如input框自动获取焦点等。在移动端用autofocus会造成只有第一次有效的情况。所有这个时候需要用到focus()方法。而在vue中想要直接操
+                              JSON 和 JS Object 看起来很像，其实两个没有任何关系。JSON 语法的作者是道格拉斯（Douglas Crockford），JS 语法的作者是布兰登・艾奇（Brendan Eich）。道格拉斯发明 JSON 的时候参考了 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-29
                             </span>
                         <span class="publish-author">
                             
