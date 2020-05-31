@@ -4,14 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="vue-瀑布流实现方法, Ayasa">
-    <meta name="description" content="
-vue-瀑布流实现方法基于vue-waterfall-easy
+    <meta name="keywords" content="flex布局中一些重要的属性, Ayasa">
+    <meta name="description" content="一.flex-grow属性
 
-
-瀑布流用css或者原生js也可以实现。以下是基于插件vue-waterfall-easy的方法，工作中遇到的问题在这里记下。
-1.1 npm安装
-npm install ">
+flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。当flex-grow为1时子盒子会填满父盒子的剩余空间，所以当三个0，1，0的盒子排列在一起是中间的盒子宽度会是两边盒子的两倍。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +15,7 @@ npm install ">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>vue-瀑布流实现方法 | Ayasa</title>
+    <title>flex布局中一些重要的属性 | Ayasa</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +305,12 @@ npm install ">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">vue-瀑布流实现方法</h1>
+                    <h1 class="description center-align post-title">flex布局中一些重要的属性</h1>
                 </div>
             </div>
         </div>
@@ -447,7 +443,7 @@ npm install ">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-25
+                    2020-05-31
                 </div>
                 
 
@@ -456,7 +452,7 @@ npm install ">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    188
+                    244
                 </div>
                 
 
@@ -474,28 +470,14 @@ npm install ">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>vue-瀑布流实现方法基于vue-waterfall-easy</p>
+                <p>一.flex-grow属性</p>
+<blockquote>
+<p>flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。当flex-grow为1时子盒子会填满父盒子的剩余空间，所以当三个0，1，0的盒子排列在一起是中间的盒子宽度会是两边盒子的两倍。可以用这个原理实现两边固定中间变化的双飞燕布局。其次两个0，1的盒子放在一起，另一个可以占满剩余的所有空间，此时可以用justify-content中的flex-start，center再加上margin来任意的操控子盒子。</p>
 </blockquote>
 <hr>
-<h4 id="瀑布流用css或者原生js也可以实现。以下是基于插件vue-waterfall-easy的方法，工作中遇到的问题在这里记下。"><a href="#瀑布流用css或者原生js也可以实现。以下是基于插件vue-waterfall-easy的方法，工作中遇到的问题在这里记下。" class="headerlink" title="瀑布流用css或者原生js也可以实现。以下是基于插件vue-waterfall-easy的方法，工作中遇到的问题在这里记下。"></a>瀑布流用css或者原生js也可以实现。以下是基于插件vue-waterfall-easy的方法，工作中遇到的问题在这里记下。</h4><hr>
-<h3 id="1-1-npm安装"><a href="#1-1-npm安装" class="headerlink" title="1.1 npm安装"></a>1.1 npm安装</h3><blockquote>
-<p>npm install vue-waterfall-easy –save-dev</p>
-</blockquote>
-<h3 id="1-2-es6语法引用"><a href="#1-2-es6语法引用" class="headerlink" title="1.2 es6语法引用"></a>1.2 es6语法引用</h3><blockquote>
-<p>import vueWaterfallEasy from ‘vue-waterfall-easy’</p>
-</blockquote>
+<p>二.flex-direction和flex-wrap</p>
 <blockquote>
-<p>export default {<br>  name: ‘app’,<br>  components: {<br>    vueWaterfallEasy<br>  }<br>}</p>
-</blockquote>
-<h3 id="2-基本示例"><a href="#2-基本示例" class="headerlink" title="2. 基本示例"></a>2. 基本示例</h3><blockquote>
-<p>&lt;vue-waterfall-easy :imgsArr=”imgsArr” @scrollReachBottom=”getData”&gt;</vue-waterfall-easy></p>
-</blockquote>
-<h3 id="js部分"><a href="#js部分" class="headerlink" title="js部分"></a>js部分</h3><blockquote>
-<p>import vueWaterfallEasy from ‘./vue-waterfall-easy/vue-waterfall-easy.vue’<br>import axios from ‘axios’</p>
-</blockquote>
-<blockquote>
-<p>export default {<br>  name: ‘app’,<br>  data() {<br>    return {<br>      imgsArr: [],<br>      group: 0, // request param<br>    }<br>  },<br>  components: {<br>    vueWaterfallEasy<br>  },<br>  methods: {<br>    getData() {<br>      axios.get(‘./static/mock/data.json?group=’ + this.group) // 真实环境中，后端会根据参数group返回新的图片数组，这里我用一个静态json文件模拟<br>        .then(res =&gt; {<br>          this.imgsArr = this.imgsArr.concat(res.data)<br>          this.group++<br>        })<br>    },<br>  },<br>  created() {<br>    this.getData()<br>  }<br>}</p>
+<p>很多时候，布局想要达到竖排的效果。此时可以使用ul+li或者flex-direction+column来改变flex布局主轴的方向。有些时候，我们需要一排只展示是个图标，那可以使用flex-wrap+width:25%;这样就能达到一排四个就换行的效果。</p>
 </blockquote>
 
             </div>
@@ -522,7 +504,7 @@ npm install ">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/02/25/vue-pu-bu-liu-shi-xian-fang-fa/">http://yoursite.com/2020/02/25/vue-pu-bu-liu-shi-xian-fang-fa/</a>
+                    <a href="http://yoursite.com/2020/05/31/flex-bu-ju-zhong-yi-xie-chong-yao-de-shu-xing/">http://yoursite.com/2020/05/31/flex-bu-ju-zhong-yi-xie-chong-yao-de-shu-xing/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -727,33 +709,32 @@ npm install ">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/02/29/nuxt-kuang-jia-cai-keng-yi/">
+                <a href="/2020/05/31/flex-bu-ju-zhong-yi-xie-chong-yao-de-shu-xing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="nuxt框架踩坑(一)">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="flex布局中一些重要的属性">
                         
-                        <span class="card-title">nuxt框架踩坑(一)</span>
+                        <span class="card-title">flex布局中一些重要的属性</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-nuxt框架踩坑之关于引入的插件报错显示”document is not defined”
+                            一.flex-grow属性
 
-
-前段时间，使用瀑布流组件写公司项目时在引入和使用都正确的情况下出现了报错”document is not defined”，令我百思不得其解，
+flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。当flex-grow为1时子盒子会填满父盒子的剩余空间，所以当三个0，1，0的盒子排列在一起是中间的盒子宽度会是两边盒子的两倍。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -762,6 +743,7 @@ nuxt框架踩坑之关于引入的插件报错显示”document is not defined�
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -780,29 +762,28 @@ nuxt框架踩坑之关于引入的插件报错显示”document is not defined�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/23/song-dong-yang-ma-sheng-xu/">
+                <a href="/2020/04/17/focusupdata-yi-ji-wei-xin-xiao-cheng-xu-de-yi-xie-wen-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="送东阳马生序">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="focusUpdata()以及微信小程序的一些问题">
                         
-                        <span class="card-title">送东阳马生序</span>
+                        <span class="card-title">focusUpdata()以及微信小程序的一些问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-送东阳马生序（摘抄）
+                            vue 强制更新强制更新 this.$forceUpdate()。迫使 Vue 实例重新渲染。注意它仅仅影响实例本身和插入插槽内容的子组件，而不是所有子组件。
 
+js保留两位小数方法
 
-明朝宋濂的送东阳马生序是我非常喜欢的一篇古文，故手录之。
-  &nbsp;&nbsp;余幼时即嗜学。家贫，无从致书以观，每假借于藏书之家，手自笔录，计日以还。天大寒，砚冰坚，手指不可屈伸，弗之怠。录毕，走送之，不
+Math.floor(15.7784514000 * 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-17
                             </span>
                         <span class="publish-author">
                             
@@ -815,8 +796,8 @@ nuxt框架踩坑之关于引入的插件报错显示”document is not defined�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                        <span class="chip bg-color">随笔</span>
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
                     </a>
                     
                 </div>
