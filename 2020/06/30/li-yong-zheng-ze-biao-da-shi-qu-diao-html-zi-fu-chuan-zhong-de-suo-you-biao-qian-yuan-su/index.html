@@ -4,10 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="flex布局中一些重要的属性, Ayasa">
-    <meta name="description" content="一.flex-grow属性
+    <meta name="keywords" content="利用正则表达式去掉html字符串中的所有标签元素, Ayasa">
+    <meta name="description" content="有些时候我们会利用v-html来写入一些带有html标签的字符串，这时候可能会改变原来的字符串结构，变的在其他地方解析错误。这时候我们就需要使用一行代码来清除对字符串的污染。这就是：
 
-flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。当flex-grow为1时子盒子会填满父盒子的剩余空间，所以当三个0，1，0的盒子排列在一起是中间的盒子宽度会是两边盒子的两倍。">
+str.replace(/&amp;lt;[^&amp;gt;]+&amp;g">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +15,7 @@ flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余�
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>flex布局中一些重要的属性 | Ayasa</title>
+    <title>利用正则表达式去掉html字符串中的所有标签元素 | Ayasa</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +305,12 @@ flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余�
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">flex布局中一些重要的属性</h1>
+                    <h1 class="description center-align post-title">利用正则表达式去掉html字符串中的所有标签元素</h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@ flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余�
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-31
+                    2020-06-30
                 </div>
                 
 
@@ -452,7 +452,7 @@ flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余�
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    244
+                    107
                 </div>
                 
 
@@ -470,14 +470,9 @@ flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余�
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>一.flex-grow属性</p>
+                <p>有些时候我们会利用v-html来写入一些带有html标签的字符串，这时候可能会改变原来的字符串结构，变的在其他地方解析错误。这时候我们就需要使用一行代码来清除对字符串的污染。这就是：</p>
 <blockquote>
-<p>flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。当flex-grow为1时子盒子会填满父盒子的剩余空间，所以当三个0，1，0的盒子排列在一起是中间的盒子宽度会是两边盒子的两倍。可以用这个原理实现两边固定中间变化的双飞燕布局。其次两个0，1的盒子放在一起，另一个可以占满剩余的所有空间，此时可以用justify-content中的flex-start，center再加上margin来任意的操控子盒子。</p>
-</blockquote>
-<hr>
-<p>二.flex-direction和flex-wrap</p>
-<blockquote>
-<p>很多时候，布局想要达到竖排的效果。此时可以使用ul+li或者flex-direction+column来改变flex布局主轴的方向。有些时候，我们需要一排只展示是个图标，那可以使用flex-wrap+width:25%;这样就能达到一排四个就换行的效果。</p>
+<p>str.replace(/&lt;[^&gt;]+&gt;/g,””)<br>这样字符串就会还原到最初不带任何标签元素的状态。</p>
 </blockquote>
 
             </div>
@@ -504,7 +499,7 @@ flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/05/31/flex-bu-ju-zhong-yi-xie-chong-yao-de-shu-xing/">http://yoursite.com/2020/05/31/flex-bu-ju-zhong-yi-xie-chong-yao-de-shu-xing/</a>
+                    <a href="http://yoursite.com/2020/06/30/li-yong-zheng-ze-biao-da-shi-qu-diao-html-zi-fu-chuan-zhong-de-suo-you-biao-qian-yuan-su/">http://yoursite.com/2020/06/30/li-yong-zheng-ze-biao-da-shi-qu-diao-html-zi-fu-chuan-zhong-de-suo-you-biao-qian-yuan-su/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -709,9 +704,10 @@ flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/06/30/li-yong-zheng-ze-biao-da-shi-qu-diao-html-zi-fu-chuan-zhong-de-suo-you-biao-qian-yuan-su/">
                     <div class="card-image">
@@ -731,9 +727,9 @@ str.replace(/&lt;[^&gt;]+&g
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -742,6 +738,7 @@ str.replace(/&lt;[^&gt;]+&g
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -760,28 +757,26 @@ str.replace(/&lt;[^&gt;]+&g
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/17/focusupdata-yi-ji-wei-xin-xiao-cheng-xu-de-yi-xie-wen-ti/">
+                <a href="/2020/05/31/flex-bu-ju-zhong-yi-xie-chong-yao-de-shu-xing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="focusUpdata()以及微信小程序的一些问题">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="flex布局中一些重要的属性">
                         
-                        <span class="card-title">focusUpdata()以及微信小程序的一些问题</span>
+                        <span class="card-title">flex布局中一些重要的属性</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            vue 强制更新强制更新 this.$forceUpdate()。迫使 Vue 实例重新渲染。注意它仅仅影响实例本身和插入插槽内容的子组件，而不是所有子组件。
+                            一.flex-grow属性
 
-js保留两位小数方法
-
-Math.floor(15.7784514000 * 
+flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。当flex-grow为1时子盒子会填满父盒子的剩余空间，所以当三个0，1，0的盒子排列在一起是中间的盒子宽度会是两边盒子的两倍。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-31
                             </span>
                         <span class="publish-author">
                             
