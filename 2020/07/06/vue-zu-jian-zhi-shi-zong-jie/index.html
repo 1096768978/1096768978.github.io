@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="页面刷新导致数据丢失的问题, Ayasa">
-    <meta name="description" content="在做vue项目的过程中有时候会遇到一个问题，就是进行F5页面刷新的时候，页面的数据会丢失，出现这个问题的原因是因为当用vuex做全局状态管理的时候，store中的数据是保存在运行内存中的，页面刷新时会重新加载vue实例，store中的数据就">
+    <meta name="keywords" content="vue组件知识总结, Ayasa">
+    <meta name="description" content="Vue 组件的 API 来自三部分——prop、事件($emit)和插槽(slot)：Prop 允许外部环境传递数据给组件；事件允许从组件内触发外部环境的副作用；插槽允许外部环境将额外的内容组合在组件中。(当组件中有两个以上的地方都需要使用">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>页面刷新导致数据丢失的问题 | Ayasa</title>
+    <title>vue组件知识总结 | Ayasa</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,12 +303,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">页面刷新导致数据丢失的问题</h1>
+                    <h1 class="description center-align post-title">vue组件知识总结</h1>
                 </div>
             </div>
         </div>
@@ -441,7 +441,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-03
+                    2020-07-06
                 </div>
                 
 
@@ -450,14 +450,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    568
+                    234
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -468,26 +468,16 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="在做vue项目的过程中有时候会遇到一个问题，就是进行F5页面刷新的时候，页面的数据会丢失，出现这个问题的原因是因为当用vuex做全局状态管理的时候，store中的数据是保存在运行内存中的，页面刷新时会重新加载vue实例，store中的数据就会被重新赋值，因此数据就丢失了，解决方式如下："><a href="#在做vue项目的过程中有时候会遇到一个问题，就是进行F5页面刷新的时候，页面的数据会丢失，出现这个问题的原因是因为当用vuex做全局状态管理的时候，store中的数据是保存在运行内存中的，页面刷新时会重新加载vue实例，store中的数据就会被重新赋值，因此数据就丢失了，解决方式如下：" class="headerlink" title="在做vue项目的过程中有时候会遇到一个问题，就是进行F5页面刷新的时候，页面的数据会丢失，出现这个问题的原因是因为当用vuex做全局状态管理的时候，store中的数据是保存在运行内存中的，页面刷新时会重新加载vue实例，store中的数据就会被重新赋值，因此数据就丢失了，解决方式如下："></a>在做vue项目的过程中有时候会遇到一个问题，就是进行F5页面刷新的时候，页面的数据会丢失，出现这个问题的原因是因为当用vuex做全局状态管理的时候，store中的数据是保存在运行内存中的，页面刷新时会重新加载vue实例，store中的数据就会被重新赋值，因此数据就丢失了，解决方式如下：</h2><p>解决方法一：</p>
-<p>最先想到的应该就是利用localStorage/sessionStorage将数据储存在外部，做一个持久化储存，下面是利用localStorage存储的具体方案：</p>
-<p> 方案一：由于state中的数据是响应式的，而数据又是通过mutation来进行修改，故在通过mutation修改state中数据的同时调用localStorage.setItem()方法来进行数据的存储。</p>
-<blockquote>
-<p>import Vue from ‘vue’;<br>import Vuex from ‘vuex’;</p>
-</blockquote>
-<blockquote>
-<p>Vue.use(Vuex);</p>
-</blockquote>
-<blockquote>
-<p>export default new Vuex.Store（{<br>   state: {<br>      orderList: [],<br>      menuList: []<br>  },<br>   mutations: {<br>       orderList(s, d) {<br>         s.orderList= d;<br>         window.localStorage.setItem&gt; (“list”,JSON.stringify(s.orderList))<br>       },<br>       menuList(s, d) {<br>         s.menuList = d;<br>         window.localStorage.setItem&gt; (“list”,JSON.stringify(s.menuList))<br>      },<br>  }<br>}）<br>在页面加载的时候再通过localStorage.getItem()将数据取出放回到vuex，可在app.vue的created()周期函数中写如下代码：<br>       if (window.localStorage.getItem(“list”) ) {<br>        this.$store.replaceState(Object.assign({}, this.$store.state,JSON.parse(window.localStorage.getItem(“list”))))<br>    } </p>
-</blockquote>
-<p>window.addEventListener(“beforeunload”,()=&gt;{<br>        window.localStorage.setItem(“list”,JSON.stringify(this.$store.state))<br>    })</p>
+                <p>Vue 组件的 API 来自三部分——prop、事件($emit)和插槽(slot)：<br>Prop 允许外部环境传递数据给组件；<br>事件允许从组件内触发外部环境的副作用；<br>插槽允许外部环境将额外的内容组合在组件中。(当组件中有两个以上的地方都需要使用插槽slot时，可以将其中一些指定为具名插槽，具体为在子组件中<slot name="xxx"></slot>  父组件中<div slot="xxx"></div>)</p>
 <hr>
-<p>解决方法二：</p>
-<p>这个方法是基于对computed计算属性的理解，在vue的官方文档中有这么一段话：<br>我们可以将同一函数定义为一个方法而不是一个计算属性。两种方式的最终结果确实是完全相同的。然而，不同的是计算属性是基于它们的响应式依赖进行缓存的。只在相关响应式依赖发生改变时它们才会重新求值。这就意味着只要 message 还没有发生改变，多次访问 reversedMessage 计算属性会立即返回之前的计算结果，而不必再次执行函数。<br>由此得知计算属性的结果会被缓存，也就是说在有缓存的情况下，computed会优先使用缓存，于是也可以在state数据相对应的页面这样写：</p>
-<blockquote>
-<pre><code>computed:{</code></pre><p>   orderList() {<br>       return this.$store.state.orderList<br>   }<br>}   </p>
-</blockquote>
-
+<p>尽管有 prop 和事件，但是有时仍然需要在 JavaScript 中直接访问子组件。为此可以使用 ref 为子组件指定一个引用 ID。</p>
+<div id="parent">
+  <user-profile ref="profile"></user-profile>
+</div>
+var parent = new Vue({ el: '#parent' })
+// 访问子组件实例
+var child = parent.$refs.profile
+$refs 只在组件渲染完成后才填充，并且它是非响应式的。它仅仅是一个直接操作子组件的应急方案——应当避免在模板或计算属性中使用 $refs。
             </div>
             <hr/>
 
@@ -512,7 +502,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/03/03/ye-mian-shua-xin-dao-zhi-shu-ju-diu-shi-de-wen-ti/">http://yoursite.com/2020/03/03/ye-mian-shua-xin-dao-zhi-shu-ju-diu-shi-de-wen-ti/</a>
+                    <a href="http://yoursite.com/2020/07/06/vue-zu-jian-zhi-shi-zong-jie/">http://yoursite.com/2020/07/06/vue-zu-jian-zhi-shi-zong-jie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -717,31 +707,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/03/04/scoped-cai-keng-ji-shen-yong-yuan-yin/">
+                <a href="/2020/07/06/vue-zu-jian-zhi-shi-zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="scoped踩坑及慎用原因">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="vue组件知识总结">
                         
-                        <span class="card-title">scoped踩坑及慎用原因</span>
+                        <span class="card-title">vue组件知识总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            最近做项目时，因为同一样式在不同页面无法生效而百思不得其解。正好看到了以下文章，分享给各位。一.scoped的作用和原理
-
-实现组件的私有化，不对全局造成样式污染，表示当前style属性只属于当前模块虽然方便但是我们需要慎用，因为当我们使用
+                            Vue 组件的 API 来自三部分——prop、事件($emit)和插槽(slot)：Prop 允许外部环境传递数据给组件；事件允许从组件内触发外部环境的副作用；插槽允许外部环境将额外的内容组合在组件中。(当组件中有两个以上的地方都需要使用
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -750,6 +739,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -768,26 +758,26 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/29/nuxt-kuang-jia-cai-keng-er-zhi-timeago-js/">
+                <a href="/2020/06/30/li-yong-zheng-ze-biao-da-shi-qu-diao-html-zi-fu-chuan-zhong-de-suo-you-biao-qian-yuan-su/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="nuxt框架踩坑(二)之timeago.js">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="利用正则表达式去掉html字符串中的所有标签元素">
                         
-                        <span class="card-title">nuxt框架踩坑(二)之timeago.js</span>
+                        <span class="card-title">利用正则表达式去掉html字符串中的所有标签元素</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            timeago.js顾名思义是一款能显示XX分钟之前的插件。官方文档上用法也和其他插件一样npm安装后import引入即可。然而在跟随着官方文档安装之后却一直报错。解决方法如下。安装
+                            有些时候我们会利用v-html来写入一些带有html标签的字符串，这时候可能会改变原来的字符串结构，变的在其他地方解析错误。这时候我们就需要使用一行代码来清除对字符串的污染。这就是：
 
-npm install timeago.js官方导入为
+str.replace(/&lt;[^&gt;]+&g
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-30
                             </span>
                         <span class="publish-author">
                             
