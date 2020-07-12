@@ -4,14 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="vue-瀑布流实现方法, Ayasa">
-    <meta name="description" content="
-vue-瀑布流实现方法基于vue-waterfall-easy
-
-
-瀑布流用css或者原生js也可以实现。以下是基于插件vue-waterfall-easy的方法，工作中遇到的问题在这里记下。
-1.1 npm安装
-npm install ">
+    <meta name="keywords" content="内存泄漏的优化, Ayasa">
+    <meta name="description" content="程序的运行需要内存。只要程序提出要求，操作系统或者运行时（runtime）就必须供给内存。对于持续运行的服务进程（daemon），必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。不再用到的内存，没有及">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +13,7 @@ npm install ">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>vue-瀑布流实现方法 | Ayasa</title>
+    <title>内存泄漏的优化 | Ayasa</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +303,12 @@ npm install ">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">vue-瀑布流实现方法</h1>
+                    <h1 class="description center-align post-title">内存泄漏的优化</h1>
                 </div>
             </div>
         </div>
@@ -447,7 +441,7 @@ npm install ">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-25
+                    2020-07-12
                 </div>
                 
 
@@ -456,7 +450,7 @@ npm install ">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    188
+                    326
                 </div>
                 
 
@@ -474,29 +468,12 @@ npm install ">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>vue-瀑布流实现方法基于vue-waterfall-easy</p>
+                <p>程序的运行需要内存。只要程序提出要求，操作系统或者运行时（runtime）就必须供给内存。对于持续运行的服务进程（daemon），必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。不再用到的内存，没有及时释放，就叫做内存泄漏（memory leak）。</p>
+<blockquote>
+<p>const arr = [1, 2, 3, 4];<br>console.log(‘hello world’);<br>上面代码中，数组[1, 2, 3, 4]是一个值，会占用内存。变量arr是仅有的对这个值的引用，因此引用次数为1。尽管后面的代码没有用到arr，它还是会持续占用内存。<br>arr = null<br>如果增加一行代码，解除arr对[1, 2, 3, 4]引用，这块内存就可以被垃圾回收机制释放了。</p>
 </blockquote>
 <hr>
-<h4 id="瀑布流用css或者原生js也可以实现。以下是基于插件vue-waterfall-easy的方法，工作中遇到的问题在这里记下。"><a href="#瀑布流用css或者原生js也可以实现。以下是基于插件vue-waterfall-easy的方法，工作中遇到的问题在这里记下。" class="headerlink" title="瀑布流用css或者原生js也可以实现。以下是基于插件vue-waterfall-easy的方法，工作中遇到的问题在这里记下。"></a>瀑布流用css或者原生js也可以实现。以下是基于插件vue-waterfall-easy的方法，工作中遇到的问题在这里记下。</h4><hr>
-<h3 id="1-1-npm安装"><a href="#1-1-npm安装" class="headerlink" title="1.1 npm安装"></a>1.1 npm安装</h3><blockquote>
-<p>npm install vue-waterfall-easy –save-dev</p>
-</blockquote>
-<h3 id="1-2-es6语法引用"><a href="#1-2-es6语法引用" class="headerlink" title="1.2 es6语法引用"></a>1.2 es6语法引用</h3><blockquote>
-<p>import vueWaterfallEasy from ‘vue-waterfall-easy’</p>
-</blockquote>
-<blockquote>
-<p>export default {<br>  name: ‘app’,<br>  components: {<br>    vueWaterfallEasy<br>  }<br>}</p>
-</blockquote>
-<h3 id="2-基本示例"><a href="#2-基本示例" class="headerlink" title="2. 基本示例"></a>2. 基本示例</h3><blockquote>
-<p>&lt;vue-waterfall-easy :imgsArr=”imgsArr” @scrollReachBottom=”getData”&gt;</vue-waterfall-easy></p>
-</blockquote>
-<h3 id="js部分"><a href="#js部分" class="headerlink" title="js部分"></a>js部分</h3><blockquote>
-<p>import vueWaterfallEasy from ‘./vue-waterfall-easy/vue-waterfall-easy.vue’<br>import axios from ‘axios’</p>
-</blockquote>
-<blockquote>
-<p>export default {<br>  name: ‘app’,<br>  data() {<br>    return {<br>      imgsArr: [],<br>      group: 0, // request param<br>    }<br>  },<br>  components: {<br>    vueWaterfallEasy<br>  },<br>  methods: {<br>    getData() {<br>      axios.get(‘./static/mock/data.json?group=’ + this.group) // 真实环境中，后端会根据参数group返回新的图片数组，这里我用一个静态json文件模拟<br>        .then(res =&gt; {<br>          this.imgsArr = this.imgsArr.concat(res.data)<br>          this.group++<br>        })<br>    },<br>  },<br>  created() {<br>    this.getData()<br>  }<br>}</p>
-</blockquote>
+<p>在vue中如何处理内存泄漏<br>如果在mounted/created 钩子中绑定了DOM/BOM 对象中的事件，需要在beforeDestroy 中做对应解绑处理<br>如果在mounted/created 钩子中使用了第三方库初始化，需要在beforeDestroy 中做对应销毁处理<br>如果组件中使用了定时器，需要在beforeDestroy 中做对应销毁处理<br>此外，闭包函数也会引起内存泄漏</p>
 
             </div>
             <hr/>
@@ -522,7 +499,7 @@ npm install ">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/02/25/vue-pu-bu-liu-shi-xian-fang-fa/">http://yoursite.com/2020/02/25/vue-pu-bu-liu-shi-xian-fang-fa/</a>
+                    <a href="http://yoursite.com/2020/07/12/nei-cun-xie-lou-de-you-hua/">http://yoursite.com/2020/07/12/nei-cun-xie-lou-de-you-hua/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -727,33 +704,30 @@ npm install ">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/02/29/nuxt-kuang-jia-cai-keng-yi/">
+                <a href="/2020/07/12/nei-cun-xie-lou-de-you-hua/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="nuxt框架踩坑(一)">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="内存泄漏的优化">
                         
-                        <span class="card-title">nuxt框架踩坑(一)</span>
+                        <span class="card-title">内存泄漏的优化</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-nuxt框架踩坑之关于引入的插件报错显示”document is not defined”
-
-
-前段时间，使用瀑布流组件写公司项目时在引入和使用都正确的情况下出现了报错”document is not defined”，令我百思不得其解，
+                            程序的运行需要内存。只要程序提出要求，操作系统或者运行时（runtime）就必须供给内存。对于持续运行的服务进程（daemon），必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。不再用到的内存，没有及
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -762,6 +736,7 @@ nuxt框架踩坑之关于引入的插件报错显示”document is not defined�
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -780,29 +755,24 @@ nuxt框架踩坑之关于引入的插件报错显示”document is not defined�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/23/song-dong-yang-ma-sheng-xu/">
+                <a href="/2020/07/06/vue-zu-jian-zhi-shi-zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="送东阳马生序">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="vue组件知识总结">
                         
-                        <span class="card-title">送东阳马生序</span>
+                        <span class="card-title">vue组件知识总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-送东阳马生序（摘抄）
-
-
-明朝宋濂的送东阳马生序是我非常喜欢的一篇古文，故手录之。
-  &nbsp;&nbsp;余幼时即嗜学。家贫，无从致书以观，每假借于藏书之家，手自笔录，计日以还。天大寒，砚冰坚，手指不可屈伸，弗之怠。录毕，走送之，不
+                            Vue 组件的 API 来自三部分——prop、事件($emit)和插槽(slot)：Prop 允许外部环境传递数据给组件；事件允许从组件内触发外部环境的副作用；插槽允许外部环境将额外的内容组合在组件中。(当组件中有两个以上的地方都需要使用
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-06
                             </span>
                         <span class="publish-author">
                             
@@ -815,8 +785,8 @@ nuxt框架踩坑之关于引入的插件报错显示”document is not defined�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                        <span class="chip bg-color">随笔</span>
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
                     </a>
                     
                 </div>
