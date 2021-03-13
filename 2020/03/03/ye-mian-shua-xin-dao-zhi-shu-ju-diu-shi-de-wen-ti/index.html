@@ -26,7 +26,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
     
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <body>
@@ -450,7 +450,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    568
+                    569
                 </div>
                 
 
@@ -485,7 +485,9 @@
 <p>解决方法二：</p>
 <p>这个方法是基于对computed计算属性的理解，在vue的官方文档中有这么一段话：<br>我们可以将同一函数定义为一个方法而不是一个计算属性。两种方式的最终结果确实是完全相同的。然而，不同的是计算属性是基于它们的响应式依赖进行缓存的。只在相关响应式依赖发生改变时它们才会重新求值。这就意味着只要 message 还没有发生改变，多次访问 reversedMessage 计算属性会立即返回之前的计算结果，而不必再次执行函数。<br>由此得知计算属性的结果会被缓存，也就是说在有缓存的情况下，computed会优先使用缓存，于是也可以在state数据相对应的页面这样写：</p>
 <blockquote>
-<pre><code>computed:{</code></pre><p>   orderList() {<br>       return this.$store.state.orderList<br>   }<br>}   </p>
+<pre><code>   computed:&#123;
+</code></pre>
+<p>   orderList() {<br>       return this.$store.state.orderList<br>   }<br>}   </p>
 </blockquote>
 
             </div>
@@ -990,7 +992,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4.3k</span>&nbsp;字
+                class="white-color">5k</span>&nbsp;字
             
             
             
