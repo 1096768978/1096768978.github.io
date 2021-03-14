@@ -4,10 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JS中对象与数组互相转化方法总结, Ayasa">
-    <meta name="description" content="一.对象转数组
-
-Array.form(obj)方法。用于数组的浅拷贝。就是将一个类数组对象或者可遍历对象转换成一个真正的数组。12345678let obj &amp;#x3D; &amp;#123;        0: &amp;#39;nihao&amp;#39;,">
+    <meta name="keywords" content="实用的三方与库记录, Ayasa">
+    <meta name="description" content="
+日期与时间：day.js  (https://dayjs.fenxianglu.cn/)
+自定义hooks：ahooks（https://ahooks.js.org/zh-CN）和react-use（https://github.com/">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +15,7 @@ Array.form(obj)方法。用于数组的浅拷贝。就是将一个类数组对�
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>JS中对象与数组互相转化方法总结 | Ayasa</title>
+    <title>实用的三方与库记录 | Ayasa</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +305,12 @@ Array.form(obj)方法。用于数组的浅拷贝。就是将一个类数组对�
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JS中对象与数组互相转化方法总结</h1>
+                    <h1 class="description center-align post-title">实用的三方与库记录</h1>
                 </div>
             </div>
         </div>
@@ -427,8 +427,8 @@ Array.form(obj)方法。用于数组的浅拷贝。就是将一个类数组对�
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                                <span class="chip bg-color">前端</span>
+                            <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                                <span class="chip bg-color">随笔</span>
                             </a>
                         
                     </div>
@@ -443,7 +443,7 @@ Array.form(obj)方法。用于数组的浅拷贝。就是将一个类数组对�
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-22
+                    2020-11-07
                 </div>
                 
 
@@ -452,7 +452,7 @@ Array.form(obj)方法。用于数组的浅拷贝。就是将一个类数组对�
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    441
+                    70
                 </div>
                 
 
@@ -470,34 +470,14 @@ Array.form(obj)方法。用于数组的浅拷贝。就是将一个类数组对�
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>一.对象转数组</p>
-<ul>
-<li>Array.form(obj)方法。用于数组的浅拷贝。就是将一个类数组对象或者可遍历对象转换成一个真正的数组。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">let obj &#x3D; &#123;</span><br><span class="line">        0: &#39;nihao&#39;,</span><br><span class="line">        1: &#39;haha&#39;,</span><br><span class="line">        2: &#39;gansha&#39;,</span><br><span class="line">        &#39;length&#39;: 3</span><br><span class="line">    &#125; </span><br><span class="line">    let arr &#x3D; Array.from(obj)</span><br><span class="line">    console.log(arr);</span><br></pre></td></tr></table></figure>
-<img src="https://uploader.shimo.im/f/FR1jLqDyDiRhU9D4.png!thumbnail?accessToken=eyJhbGciOiJIUzI1NiIsImtpZCI6ImRlZmF1bHQiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE2MTU3MDczNzksImciOiJYRHloOWhUVjlISnh2UktUIiwiaWF0IjoxNjE1NzA1NTc5LCJ1Ijo0NDE5MjQ1M30.p2kq1YB9BQNHjVtFMlFkKK-Abe7_ehI9U9vnokKgk4g" alt="log.png" title="log"><blockquote>
-<p>tips: 1. object中必须有length属性，返回的数组长度取决于length长度c 2.key 值必须是数值且key就是数组的index</p>
-</blockquote>
-</li>
-<li>Object.values(object)<blockquote>
-<p>tips:与第一种不同的是不需要length属性，返回一个对象所有可枚举属性值这里简单说一下可枚举性。目前我还没理解这个可枚举性有什么用，大概意思就是对象的每一个属性都有一个描述对象，用来描述和控制该属性的行为，用Object.getOwnPropertyDescriptor方法来获取该描述对象（用Object.defineProperty方法来设置）。以后仔细研究之后会再好好写写这个可枚举性的！</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let obj &#x3D; &#123;</span><br><span class="line">        0: &#39;nihao&#39;,</span><br><span class="line">        1: &#39;haha&#39;,</span><br><span class="line">        2: &#39;gansha&#39;,</span><br><span class="line">    &#125;</span><br><span class="line">    let arr &#x3D; Object.values(obj)</span><br><span class="line">    console.log(arr);</span><br></pre></td></tr></table></figure>
-<img src="https://uploader.shimo.im/f/l6FEx07vLJswubVw.png!thumbnail?accessToken=eyJhbGciOiJIUzI1NiIsImtpZCI6ImRlZmF1bHQiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE2MTU3MDczNzksImciOiJYRHloOWhUVjlISnh2UktUIiwiaWF0IjoxNjE1NzA1NTc5LCJ1Ijo0NDE5MjQ1M30.p2kq1YB9BQNHjVtFMlFkKK-Abe7_ehI9U9vnokKgk4g" alt="log.png" title="log"></li>
-<li>Object.keys(object)<blockquote>
-<p>tips:返回一个对象的自身可枚举属性组成的数组，数组中属性名的排列顺序和使用 for…in 循环遍历该对象时返回的顺序一致</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let obj &#x3D; &#123;</span><br><span class="line">        0: &#39;nihao&#39;,</span><br><span class="line">        1: &#39;haha&#39;,</span><br><span class="line">        2: &#39;gansha&#39;,</span><br><span class="line">    &#125;</span><br><span class="line">    let arr &#x3D; Object.keys(obj)</span><br><span class="line">    console.log(arr);</span><br></pre></td></tr></table></figure>
-<img src="https://uploader.shimo.im/f/x3CMjy3VUukBKL2c.png!thumbnail?accessToken=eyJhbGciOiJIUzI1NiIsImtpZCI6ImRlZmF1bHQiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE2MTU3MDczNzksImciOiJYRHloOWhUVjlISnh2UktUIiwiaWF0IjoxNjE1NzA1NTc5LCJ1Ijo0NDE5MjQ1M30.p2kq1YB9BQNHjVtFMlFkKK-Abe7_ehI9U9vnokKgk4g" alt="log.png" title="log"></li>
-<li>Object.entries(object)<blockquote>
-<p>tips:返回一个给定对象自身可枚举属性的键值对数组</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let obj &#x3D; &#123;</span><br><span class="line">        0: &#39;nihao&#39;,</span><br><span class="line">        1: &#39;haha&#39;,</span><br><span class="line">        2: &#39;gansha&#39;,</span><br><span class="line">    &#125;</span><br><span class="line">    let arr &#x3D; Object.entries(obj)</span><br><span class="line">    console.log(arr);</span><br></pre></td></tr></table></figure>
-<img src="https://uploader.shimo.im/f/6igBrKIk2QmgrfXt.png!thumbnail?accessToken=eyJhbGciOiJIUzI1NiIsImtpZCI6ImRlZmF1bHQiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE2MTU3MDczNzksImciOiJYRHloOWhUVjlISnh2UktUIiwiaWF0IjoxNjE1NzA1NTc5LCJ1Ijo0NDE5MjQ1M30.p2kq1YB9BQNHjVtFMlFkKK-Abe7_ehI9U9vnokKgk4g" alt="log.png" title="log"></li>
-</ul>
-<hr>
-<p>二.数组转对象</p>
-<ul>
-<li>for…in循环遍历<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let obj &#x3D; &#123;&#125;</span><br><span class="line">let arr &#x3D; [7,8,9]</span><br><span class="line">for(let key in arr) &#123;</span><br><span class="line">obj[key] &#x3D; arr[key]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<img src="https://uploader.shimo.im/f/eUWNJEJNZk5NQeHT.png!thumbnail?accessToken=eyJhbGciOiJIUzI1NiIsImtpZCI6ImRlZmF1bHQiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE2MTU3MDczNzksImciOiJYRHloOWhUVjlISnh2UktUIiwiaWF0IjoxNjE1NzA1NTc5LCJ1Ijo0NDE5MjQ1M30.p2kq1YB9BQNHjVtFMlFkKK-Abe7_ehI9U9vnokKgk4g" alt="log.png" title="log"></li>
+                <ul>
+<li>日期与时间：day.js  (<a target="_blank" rel="noopener" href="https://dayjs.fenxianglu.cn/">https://dayjs.fenxianglu.cn/</a>)</li>
+<li>自定义hooks：ahooks（<a target="_blank" rel="noopener" href="https://ahooks.js.org/zh-CN%EF%BC%89%E5%92%8Creact-use%EF%BC%88https://github.com/zenghongtu/react-use-chinese%EF%BC%89">https://ahooks.js.org/zh-CN）和react-use（https://github.com/zenghongtu/react-use-chinese）</a></li>
+<li>UI库：ant design和element ui以及material-ui</li>
+<li>状态管理：redux和vuex</li>
+<li>路由：react-router和vue-router</li>
+<li>终端：windows–cmder和macos–ohmyzsh(<a target="_blank" rel="noopener" href="https://ohmyz.sh/">https://ohmyz.sh/</a>) </li>
+<li>脚手架：create-react-app和vue-cli</li>
 </ul>
 
             </div>
@@ -524,7 +504,7 @@ Array.form(obj)方法。用于数组的浅拷贝。就是将一个类数组对�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/08/22/js-zhong-dui-xiang-yu-shu-zu-hu-xiang-zhuan-hua-fang-fa-zong-jie/">http://yoursite.com/2020/08/22/js-zhong-dui-xiang-yu-shu-zu-hu-xiang-zhuan-hua-fang-fa-zong-jie/</a>
+                    <a href="http://yoursite.com/2020/11/07/shi-yong-de-san-fang-yu-ku-ji-lu/">http://yoursite.com/2020/11/07/shi-yong-de-san-fang-yu-ku-ji-lu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -562,8 +542,8 @@ Array.form(obj)方法。用于数组的浅拷贝。就是将一个类数组对�
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                                    <span class="chip bg-color">前端</span>
+                                <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                                    <span class="chip bg-color">随笔</span>
                                 </a>
                             
                         </div>
@@ -729,32 +709,30 @@ Array.form(obj)方法。用于数组的浅拷贝。就是将一个类数组对�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/08/22/js-zhong-dui-xiang-yu-shu-zu-hu-xiang-zhuan-hua-fang-fa-zong-jie/">
+                <a href="/2020/12/19/hooks-zhong-useeffect-shi-yong-zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="JS中对象与数组互相转化方法总结">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="hooks中useEffect()使用总结">
                         
-                        <span class="card-title">JS中对象与数组互相转化方法总结</span>
+                        <span class="card-title">hooks中useEffect()使用总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一.对象转数组
-
-Array.form(obj)方法。用于数组的浅拷贝。就是将一个类数组对象或者可遍历对象转换成一个真正的数组。12345678let obj &#x3D; &#123;        0: &#39;nihao&#39;,
+                            常见使用:获取数据案例:(useEffect内部使用async，await)
+123456789101112131415161718192021222324252627282930import React, &#123; useState,
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-19
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -763,7 +741,6 @@ Array.form(obj)方法。用于数组的浅拷贝。就是将一个类数组对�
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -782,26 +759,25 @@ Array.form(obj)方法。用于数组的浅拷贝。就是将一个类数组对�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/02/csr-he-ssr-xiang-jie/">
+                <a href="/2020/10/16/react-de-usememo-and-usecallback/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="CSR和SSR详解">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="React的useMemo and useCallback">
                         
-                        <span class="card-title">CSR和SSR详解</span>
+                        <span class="card-title">React的useMemo and useCallback</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一.前言
-
-现在的web网站都是非常讲究用户体验，一般都会采用服务端渲染加客户端渲染一起实现功能。服务端渲染有利于搜索引擎优化（SEO），利于被网页爬虫抓取数据，多见于电商网站商品信息获取等。客户端渲染不利于搜索引擎优化，网页数据异步获取，
+                            
+useCallback 如果在函数式组件中的话，确实应该当作最佳实践来用，但是使用它的目的除了要缓存依赖未改变的回调函数之外（与 useMemo 类似），还有一点是为了能够在依赖发生变更时，能够确保回调函数始终是最新的实例，从而不会引发一
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-16
                             </span>
                         <span class="publish-author">
                             
@@ -1004,7 +980,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5.4k</span>&nbsp;字
+                class="white-color">9.3k</span>&nbsp;字
             
             
             
