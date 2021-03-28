@@ -4,8 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="页面刷新导致数据丢失的问题, Ayasa">
-    <meta name="description" content="在做vue项目的过程中有时候会遇到一个问题，就是进行F5页面刷新的时候，页面的数据会丢失，出现这个问题的原因是因为当用vuex做全局状态管理的时候，store中的数据是保存在运行内存中的，页面刷新时会重新加载vue实例，store中的数据就">
+    <meta name="keywords" content="初识umi, Ayasa">
+    <meta name="description" content="
+什么是umi
+umi是阿里的一款可插拔的企业级react应用框架，支持约定式路由以及各种进阶路由功能，并以此进行功能扩展，拥有完善的插件体系，覆盖从源码到构建产物的每个生命周期，支持各种功能扩展和业务需求。
+
+
+umi的开发模式
+umi ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>页面刷新导致数据丢失的问题 | Ayasa</title>
+    <title>初识umi | Ayasa</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">页面刷新导致数据丢失的问题</h1>
+                    <h1 class="description center-align post-title">初识umi</h1>
                 </div>
             </div>
         </div>
@@ -441,7 +447,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-03
+                    2021-03-28
                 </div>
                 
 
@@ -450,7 +456,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    569
+                    557
                 </div>
                 
 
@@ -468,28 +474,35 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="在做vue项目的过程中有时候会遇到一个问题，就是进行F5页面刷新的时候，页面的数据会丢失，出现这个问题的原因是因为当用vuex做全局状态管理的时候，store中的数据是保存在运行内存中的，页面刷新时会重新加载vue实例，store中的数据就会被重新赋值，因此数据就丢失了，解决方式如下："><a href="#在做vue项目的过程中有时候会遇到一个问题，就是进行F5页面刷新的时候，页面的数据会丢失，出现这个问题的原因是因为当用vuex做全局状态管理的时候，store中的数据是保存在运行内存中的，页面刷新时会重新加载vue实例，store中的数据就会被重新赋值，因此数据就丢失了，解决方式如下：" class="headerlink" title="在做vue项目的过程中有时候会遇到一个问题，就是进行F5页面刷新的时候，页面的数据会丢失，出现这个问题的原因是因为当用vuex做全局状态管理的时候，store中的数据是保存在运行内存中的，页面刷新时会重新加载vue实例，store中的数据就会被重新赋值，因此数据就丢失了，解决方式如下："></a>在做vue项目的过程中有时候会遇到一个问题，就是进行F5页面刷新的时候，页面的数据会丢失，出现这个问题的原因是因为当用vuex做全局状态管理的时候，store中的数据是保存在运行内存中的，页面刷新时会重新加载vue实例，store中的数据就会被重新赋值，因此数据就丢失了，解决方式如下：</h2><p>解决方法一：</p>
-<p>最先想到的应该就是利用localStorage/sessionStorage将数据储存在外部，做一个持久化储存，下面是利用localStorage存储的具体方案：</p>
-<p> 方案一：由于state中的数据是响应式的，而数据又是通过mutation来进行修改，故在通过mutation修改state中数据的同时调用localStorage.setItem()方法来进行数据的存储。</p>
-<blockquote>
-<p>import Vue from ‘vue’;<br>import Vuex from ‘vuex’;</p>
+                <ul>
+<li>什么是umi<blockquote>
+<p>umi是阿里的一款可插拔的企业级react应用框架，支持约定式路由以及各种进阶路由功能，并以此进行功能扩展，拥有完善的插件体系，覆盖从源码到构建产物的每个生命周期，支持各种功能扩展和业务需求。</p>
 </blockquote>
-<blockquote>
-<p>Vue.use(Vuex);</p>
+</li>
+<li>umi的开发模式<blockquote>
+<p>umi 的定位是开发框架，目前包含工具 + 路由，不包含数据和视图。 所以 umi[工具 + 路由] + dva[数据] + antd(-mobile)[视图]，很配。</p>
 </blockquote>
-<blockquote>
-<p>export default new Vuex.Store（{<br>   state: {<br>      orderList: [],<br>      menuList: []<br>  },<br>   mutations: {<br>       orderList(s, d) {<br>         s.orderList= d;<br>         window.localStorage.setItem&gt; (“list”,JSON.stringify(s.orderList))<br>       },<br>       menuList(s, d) {<br>         s.menuList = d;<br>         window.localStorage.setItem&gt; (“list”,JSON.stringify(s.menuList))<br>      },<br>  }<br>}）<br>在页面加载的时候再通过localStorage.getItem()将数据取出放回到vuex，可在app.vue的created()周期函数中写如下代码：<br>       if (window.localStorage.getItem(“list”) ) {<br>        this.$store.replaceState(Object.assign({}, this.$store.state,JSON.parse(window.localStorage.getItem(“list”))))<br>    } </p>
-</blockquote>
-<p>window.addEventListener(“beforeunload”,()=&gt;{<br>        window.localStorage.setItem(“list”,JSON.stringify(this.$store.state))<br>    })</p>
+<h3 id="umi的作用"><a href="#umi的作用" class="headerlink" title="umi的作用"></a>umi的作用</h3></li>
+<li>类似next.js。umi采用约定式路由，同时支持可配置路由。即每个页面都是路由。例如在pages下面的user，在本地则可以通过localhost:8000/user来访问该页面。</li>
+<li>PWA Support</li>
+<li>Tree Shake</li>
+<li>antd(-mobile) 启用 ES Module</li>
+<li>Scope Hoist</li>
+<li>公共文件的智能提取</li>
+<li>页面级的按需加载</li>
+<li>Inline Critical CSS</li>
+<li>提供 umi/dynamic 和 import() 语法，分别用于懒加载组件和模块</li>
+<li>优化的 babel-preset-umi</li>
+<li>静态化的 SSR 处理</li>
+<li>link rel=preload</li>
+<li>hash 构建及服务端支持（云凤蝶）</li>
+<li>通过 react-constant-elements 和 react-inline-elements 提升 rerender 性能</li>
+<li>一键切换到 preact</li>
+<li>Progressive image loading</li>
+<li>按需打包 umi 内置的路由代码</li>
+</ul>
 <hr>
-<p>解决方法二：</p>
-<p>这个方法是基于对computed计算属性的理解，在vue的官方文档中有这么一段话：<br>我们可以将同一函数定义为一个方法而不是一个计算属性。两种方式的最终结果确实是完全相同的。然而，不同的是计算属性是基于它们的响应式依赖进行缓存的。只在相关响应式依赖发生改变时它们才会重新求值。这就意味着只要 message 还没有发生改变，多次访问 reversedMessage 计算属性会立即返回之前的计算结果，而不必再次执行函数。<br>由此得知计算属性的结果会被缓存，也就是说在有缓存的情况下，computed会优先使用缓存，于是也可以在state数据相对应的页面这样写：</p>
-<blockquote>
-<pre><code>   computed:&#123;
-</code></pre>
-<p>   orderList() {<br>       return this.$store.state.orderList<br>   }<br>}   </p>
-</blockquote>
-
+<h3 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h3><h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://user-gold-cdn.xitu.io/2019/7/9/16bd5da31151a441?imageslim" alt="umi.png" title="umi"></h2><h3 id="umi目录结构"><a href="#umi目录结构" class="headerlink" title="umi目录结构"></a>umi目录结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">├── dist&#x2F;                          &#x2F;&#x2F; 默认的 build 输出目录</span><br><span class="line">├── mock&#x2F;                          &#x2F;&#x2F; mock 文件所在目录，基于 express</span><br><span class="line">├── config&#x2F;</span><br><span class="line">    ├── config.js                  &#x2F;&#x2F; umi 配置，同 .umirc.js，二选一</span><br><span class="line">└── src&#x2F;                           &#x2F;&#x2F; 源码目录，可选</span><br><span class="line">    ├── layouts&#x2F;index.js           &#x2F;&#x2F; 全局布局</span><br><span class="line">    ├── pages&#x2F;                     &#x2F;&#x2F; 页面目录，里面的文件即路由</span><br><span class="line">        ├── .umi&#x2F;                  &#x2F;&#x2F; dev 临时目录，需添加到 .gitignore</span><br><span class="line">        ├── .umi-production&#x2F;       &#x2F;&#x2F; build 临时目录，会自动删除</span><br><span class="line">        ├── document.ejs           &#x2F;&#x2F; HTML 模板</span><br><span class="line">        ├── 404.js                 &#x2F;&#x2F; 404 页面</span><br><span class="line">        ├── page1.js               &#x2F;&#x2F; 页面 1，任意命名，导出 react 组件</span><br><span class="line">        ├── page1.test.js          &#x2F;&#x2F; 用例文件，umi test 会匹配所有 .test.js 和 .e2e.js 结尾的文件</span><br><span class="line">        └── page2.js               &#x2F;&#x2F; 页面 2，任意命名</span><br><span class="line">    ├── global.css                 &#x2F;&#x2F; 约定的全局样式文件，自动引入，也可以用 global.less</span><br><span class="line">    ├── global.js                  &#x2F;&#x2F; 可以在这里加入 polyfill</span><br><span class="line">    ├── app.js                     &#x2F;&#x2F; 运行时配置文件</span><br><span class="line">├── .umirc.js                      &#x2F;&#x2F; umi 配置，同 config&#x2F;config.js，二选一</span><br><span class="line">├── .env                           &#x2F;&#x2F; 环境变量</span><br><span class="line">└── package.json</span><br></pre></td></tr></table></figure>
             </div>
             <hr/>
 
@@ -514,7 +527,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/03/03/ye-mian-shua-xin-dao-zhi-shu-ju-diu-shi-de-wen-ti/">http://yoursite.com/2020/03/03/ye-mian-shua-xin-dao-zhi-shu-ju-diu-shi-de-wen-ti/</a>
+                    <a href="http://yoursite.com/2021/03/28/chu-shi-umi/">http://yoursite.com/2021/03/28/chu-shi-umi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -719,31 +732,36 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/03/04/scoped-cai-keng-ji-shen-yong-yuan-yin/">
+                <a href="/2021/03/28/chu-shi-umi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="scoped踩坑及慎用原因">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="初识umi">
                         
-                        <span class="card-title">scoped踩坑及慎用原因</span>
+                        <span class="card-title">初识umi</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            最近做项目时，因为同一样式在不同页面无法生效而百思不得其解。正好看到了以下文章，分享给各位。一.scoped的作用和原理
+                            
+什么是umi
+umi是阿里的一款可插拔的企业级react应用框架，支持约定式路由以及各种进阶路由功能，并以此进行功能扩展，拥有完善的插件体系，覆盖从源码到构建产物的每个生命周期，支持各种功能扩展和业务需求。
 
-实现组件的私有化，不对全局造成样式污染，表示当前style属性只属于当前模块虽然方便但是我们需要慎用，因为当我们使用
+
+umi的开发模式
+umi 
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -752,6 +770,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -770,26 +789,26 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/29/nuxt-kuang-jia-cai-keng-er-zhi-timeago-js/">
+                <a href="/2021/03/13/react-class-zu-jian-xin-de-ji-lu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="nuxt框架踩坑(二)之timeago.js">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="React Class组件心得记录">
                         
-                        <span class="card-title">nuxt框架踩坑(二)之timeago.js</span>
+                        <span class="card-title">React Class组件心得记录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            timeago.js顾名思义是一款能显示XX分钟之前的插件。官方文档上用法也和其他插件一样npm安装后import引入即可。然而在跟随着官方文档安装之后却一直报错。解决方法如下。安装
+                            
 
-npm install timeago.js官方导入为
+创建class 组件123456789101112import React,&#123; Component &#125; from &#39;react&#39;;class B extends Component &#123;  c
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-13
                             </span>
                         <span class="publish-author">
                             
